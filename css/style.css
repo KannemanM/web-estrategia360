@@ -1,0 +1,40 @@
+/* Ajustes finos para la superposición de imágenes */
+.hero-bg {
+    background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.7)), url('/img/hero.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+/* 1. Animación: FADE IN UP (Aparece y sube 40px) */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px); /* Empieza 40px más abajo */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Termina en su posición original */
+    }
+}
+
+/* Clase para aplicar FADE IN UP */
+.hero-animate-up {
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+/* ---------------------------------------------------- */
+
+/* 2. Animación: FADE IN (Solo aparece, sin movimiento) */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Empieza completamente transparente */
+    }
+    100% {
+        opacity: 1; /* Termina completamente visible */
+    }
+}
+
+/* Clase para aplicar FADE IN simple */
+.hero-animate-simple {
+    animation: fadeIn 1.5s ease-out forwards;
+}

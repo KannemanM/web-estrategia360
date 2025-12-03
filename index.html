@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrategia 360 | Tu visión, nuestra estrategia</title>
+    <meta name="description" content="Consultoría integral en marketing, contaduría, asesoría legal y traductorado.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuración de Tailwind (Externo) -->
+    <script src="js/tailwind-config.js"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Iconos (FontAwesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Mis Estilos Personalizados -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-sans text-slate-600 bg-slate-50 antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="/img/logo.webp" alt="Logo Estrategia 360" class="w-[80px] h-auto object-contain">
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="text-slate-600 hover:text-brand-blue font-medium transition">Inicio</a>
+                    <a href="#nosotros" class="text-slate-600 hover:text-brand-blue font-medium transition">Nosotros</a>
+                    <a href="#equipo" class="text-slate-600 hover:text-brand-blue font-medium transition">Equipo</a>
+                    <a href="#servicios" class="text-slate-600 hover:text-brand-blue font-medium transition">Servicios</a>
+                    <a href="#contacto" class="bg-brand-accent text-white px-5 py-2 rounded-full font-medium hover:bg-brand-dark transition shadow-lg shadow-blue-500/30">Contacto</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-brand-blue focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#inicio" class="block px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-blue rounded-md">Inicio</a>
+                <a href="#nosotros" class="block px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-blue rounded-md">Nosotros</a>
+                <a href="#equipo" class="block px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-blue rounded-md">Equipo</a>
+                <a href="#servicios" class="block px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-blue rounded-md">Servicios</a>
+                <a href="#contacto" class="block px-3 py-3 text-base font-medium text-brand-blue font-bold">Contactar ahora</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-bg h-screen flex items-center justify-center text-center px-4 hero-animate-simple">
+        <div class="max-w-4xl mx-auto text-white space-y-6 hero-animate-up">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+                Tu visión, <span class="text-brand-accent">nuestra estrategia.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-200 max-w-2xl mx-auto">
+                Soluciones integrales en marketing, contabilidad, legal y traducción para potenciar el crecimiento de tu organización.
+            </p>
+            <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#servicios" class="bg-brand-accent hover:bg-brand-blue text-white px-8 py-3 rounded-full font-semibold transition text-lg shadow-lg">
+                    Nuestros Servicios
+                </a>
+                <a href="#contacto" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-dark px-8 py-3 rounded-full font-semibold transition text-lg">
+                    Hablemos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Valores (Features Grid) -->
+    <section class="py-16 bg-white relative -mt-10 z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 rounded-xl shadow-xl border border-slate-100 hero-animate-simple">
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
+            <div class="group">
+                <div class="w-16 h-16 mx-auto bg-brand-blue-50 rounded-full flex items-center justify-center text-brand-blue text-2xl mb-4 group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3 class="font-semibold text-slate-800">Colaboración</h3>
+            </div>
+            <div class="group">
+                <div class="w-16 h-16 mx-auto bg-blue-50 rounded-full flex items-center justify-center text-brand-blue text-2xl mb-4 group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h3 class="font-semibold text-slate-800">Compromiso</h3>
+            </div>
+            <div class="group">
+                <div class="w-16 h-16 mx-auto bg-blue-50 rounded-full flex items-center justify-center text-brand-blue text-2xl mb-4 group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3 class="font-semibold text-slate-800">Excelencia</h3>
+            </div>
+            <div class="group">
+                <div class="w-16 h-16 mx-auto bg-blue-50 rounded-full flex items-center justify-center text-brand-blue text-2xl mb-4 group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <h3 class="font-semibold text-slate-800">Integridad</h3>
+            </div>
+            <div class="group">
+                <div class="w-16 h-16 mx-auto bg-blue-50 rounded-full flex items-center justify-center text-brand-blue text-2xl mb-4 group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3 class="font-semibold text-slate-800">Innovación</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosotros / Historia -->
+    <section id="nosotros" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center hero-animate-simple">
+            <div>
+                <span class="text-brand-accent font-semibold tracking-wider uppercase text-sm">Sobre Nosotros</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mt-2 mb-6">Aliados estratégicos para tu crecimiento</h2>
+                <p class="text-slate-600 mb-4 leading-relaxed">
+                    En <strong>Estrategia 360</strong>, ofrecemos soluciones integrales que abordan las necesidades únicas de empresas, organizaciones sin fines de lucro y entidades gubernamentales.
+                </p>
+                <p class="text-slate-600 mb-6 leading-relaxed">
+                    Más que una consultora, somos un proyecto familiar construido sobre la base de la confianza. Trabajamos en estrecha colaboración para desarrollar estrategias personalizadas que generan resultados tangibles.
+                </p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-100 border-l-4 border-l-brand-blue">
+                        <h4 class="font-bold text-lg text-slate-800 mb-2">Misión</h4>
+                        <p class="text-sm text-slate-600">Empoderar a nuestros clientes mediante soluciones integrales que fomentan el crecimiento sostenible y el impacto positivo.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-100 border-l-4 border-l-brand-accent">
+                        <h4 class="font-bold text-lg text-slate-800 mb-2">Visión</h4>
+                        <p class="text-sm text-slate-600">Ser referentes en la creación de soluciones disruptivas que marcan la diferencia y generan valor a largo plazo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="/img/nosotros.webp" alt="Reunión de equipo" class="rounded-2xl shadow-2xl relative z-10 w-full object-cover h-[500px]">
+                <div class="absolute -bottom-6 -left-6 bg-brand-blue p-8 rounded-xl z-20 text-white max-w-xs shadow-xl hidden md:block">
+                    <p class="text-xl font-serif italic">"Tu éxito avanza mientras trabajamos contigo."</p>
+                </div>
+                <div class="absolute top-[-20px] right-[-20px] w-32 h-32 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiNjY2MiLz48L3N2Zz4=')] opacity-30 z-0"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipo (Profesionales) -->
+    <section id="equipo" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 hero-animate-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800">Nuestro Equipo Profesional</h2>
+                <div class="w-20 h-1 bg-brand-accent mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- CEO Highlight -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden mb-12 flex flex-col md:flex-row">
+                <div class="md:w-1/3 h-64 md:h-auto relative">
+                    <img src="/img/oscar-magni-oga.webp" alt="Oscar Magni Oga" class="w-full h-full object-cover">
+                </div>
+                <div class="md:w-2/3 p-8 md:p-12 flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold text-slate-800">Oscar Magni Oga</h3>
+                    <p class="text-brand-blue font-medium mb-4">CEO Fundador - Director</p>
+                    <p class="text-slate-600 leading-relaxed italic border-l-4 border-slate-200 pl-4">
+                        "Estrategia 360 es más que una consultora: es un proyecto familiar, construido sobre la base de la confianza, el trabajo en equipo y la experiencia profesional de cada miembro. Los fundadores, todos familiares, han combinado sus distintas áreas de especialización para crear una empresa integral, comprometida no solo con el éxito de sus clientes, sino también con los valores de cercanía y responsabilidad que unen a su familia."
+                    </p>
+                    <a href="/docs/cv_oscar_magni.pdf"
+   target="_blank"
+   class="mt-4 px-4 py-2 text-sm font-semibold bg-brand-accent text-white rounded-full hover:bg-brand-dark transition inline-block self-start">
+    Ver CV completo 📄
+</a>
+
+
+                </div>
+            </div>
+
+            <!-- Especialistas en marketing -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden mb-12 flex flex-col md:flex-row">
+                <div class="md:w-1/3 h-64 md:h-auto relative">
+                    <img src="/img/matias.webp" alt="Oscar Magni Oga" class="w-full h-full object-cover">
+                </div>
+                <div class="md:w-2/3 p-8 md:p-12 flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold text-slate-800">Matias Magni Cardetti</h3>
+                    <p class="text-brand-blue font-medium mb-4">Magister en Administración de Empresas (MBA)<br>
+Especialista en Marketing Estratégico</p>
+                    <div class="text-slate-600 leading-relaxed italic border-l-4 border-slate-200 pl-4">
+                        <div class="servicio-item">
+        <h3 class="font-bold">Segmentación Inteligente</h3>
+        <p>Enfoque preciso en los clientes con mayor potencial de crecimiento para maximizar la rentabilidad de tu inversión.</p>
+    </div>
+
+    <div class="servicio-item">
+        <h3 class="font-bold">Posicionamiento Único</h3>
+        <p>Definimos tu ventaja competitiva para que tu marca ocupe un lugar distintivo y memorable en la mente del consumidor.</p>
+    </div>
+
+    <div class="servicio-item">
+        <h3 class="font-bold">Atracción Digital y Neuromarketing</h3>
+        <p>Utilizamos SEO, SEM y Neurociencia para captar clientes e influir directamente en sus decisiones de compra.</p>
+    </div>
+
+    <div class="servicio-item">
+        <h3 class="font-bold">Fidelización y Experiencia</h3>
+        <p>Diseñamos programas que convierten clientes satisfechos en embajadores que aseguran relaciones duraderas.</p>
+    </div>
+
+    <div class="servicio-item">
+        <h3 class="font-bold">Planes de Valor a Largo Plazo</h3>
+        <p>Creamos tu hoja de ruta personalizada y rigurosa, centrada en el crecimiento estable y el valor a futuro.</p>
+    </div>
+</div>
+                </div>
+            </div>
+
+            <!-- Grid de Profesionales -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+
+    <div class="md:col-span-3 flex justify-center">
+        <div class="w-full md:w-1/3 lg:w-1/3 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 overflow-hidden group">
+            <div class="w-full aspect-square overflow-hidden">
+                 <img src="/img/jorge.webp" alt="Jorge Antonietti" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            </div>
+            <div class="p-8 text-center">
+                <h3 class="font-extrabold text-2xl text-slate-900">Jorge Antonietti</h3>
+                <p class="text-md text-brand-accent font-medium mb-4">Prevención de Pérdidas & Gestión de RRHH</p>
+                <ul class="text-sm text-slate-600 space-y-1 list-disc list-inside inline-block text-left">
+                    <li>Amplia experiencia en prevención de pérdidas, control de procesos y análisis de riesgos.</li>
+                    <li>Formación en administración de personal.</li>
+                    <li>Sólida trayectoria en la gestión y supervisión de equipos.</li>
+                </ul>
+                <a href="/docs/cv_jorge_antonietti.pdf" target="_blank" class="inline-block mt-4 px-4 py-2 text-sm font-semibold bg-brand-accent text-white rounded-full hover:bg-brand-dark transition">
+            Ver CV completo 📄 </a>
+            
+            
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group">
+        <div class="w-full aspect-square overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Petenatti Verónica" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-6">
+            <h3 class="font-bold text-lg text-slate-800">Petenatti Verónica</h3>
+            <p class="text-sm text-brand-accent font-medium mb-3">Contadora Pública Nacional</p>
+            <p class="text-sm text-slate-600 line-clamp-3">
+                Auditorías, estados financieros y asesoramiento fiscal para empresas de todos los tamaños.
+            </p>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group">
+        <div class="w-full aspect-square overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1589578527966-fdac0f44566c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Paula Magni" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-6">
+            <h3 class="font-bold text-lg text-slate-800">Paula Magni</h3>
+            <p class="text-sm text-brand-accent font-medium mb-3">Abogada</p>
+            <p class="text-sm text-slate-600 line-clamp-3">
+                Derecho corporativo, laboral y comercial. Protección integral de tus intereses.
+            </p>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group">
+        <div class="w-full aspect-square overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-1.2.1&auto=format&fit-crop&w=800&q=80" alt="Luciano Ojeda" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-6">
+            <h3 class="font-bold text-lg text-slate-800">Luciano Ojeda</h3>
+            <p class="text-sm text-brand-accent font-medium mb-3">Traductor</p>
+            <p class="text-sm text-slate-600 line-clamp-3">
+                Traducción técnica, legal y comercial (Inglés-Español) con precisión cultural.
+            </p>
+        </div>
+    </div>
+</div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 hero-animate-up">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-800">Nuestros Servicios</h2>
+            <p class="text-slate-600 mt-4 max-w-2xl mx-auto">Cubrimos todas las áreas críticas para el funcionamiento y expansión de tu empresa.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Marketing Card -->
+            <div class="bg-white p-8 rounded-xl shadow-md border border-slate-100 hover:shadow-xl hover:border-brand-blue/30 transition duration-300">
+                <div class="w-14 h-14 bg-blue-100 text-brand-blue rounded-lg flex items-center justify-center text-2xl mb-6">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-800 mb-3">Marketing Integral</h3>
+                <p class="text-slate-600 mb-4">Desde la segmentación de mercados y branding hasta estrategias digitales avanzadas y neuromarketing.</p>
+                <a href="#contacto" class="text-brand-accent font-semibold hover:text-brand-blue text-sm">Consultar <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+
+            <!-- Capacitación -->
+            <div class="bg-white p-8 rounded-xl shadow-md border border-slate-100 hover:shadow-xl hover:border-brand-blue/30 transition duration-300">
+                <div class="w-14 h-14 bg-green-100 text-green-600 rounded-lg flex items-center justify-center text-2xl mb-6">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-800 mb-3">Capacitación</h3>
+                <p class="text-slate-600 mb-4">Liderazgo, gestión de proyectos y habilidades técnicas. Talleres interactivos para potenciar a tu equipo.</p>
+                <a href="#contacto" class="text-brand-accent font-semibold hover:text-brand-blue text-sm">Consultar <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+
+            <!-- Contabilidad -->
+            <div class="bg-white p-8 rounded-xl shadow-md border border-slate-100 hover:shadow-xl hover:border-brand-blue/30 transition duration-300">
+                <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center text-2xl mb-6">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-800 mb-3">Contabilidad</h3>
+                <p class="text-slate-600 mb-4">Contabilidad general, auditorías y asesoramiento fiscal para mantener tus finanzas en perfecto orden.</p>
+                <a href="#contacto" class="text-brand-accent font-semibold hover:text-brand-blue text-sm">Consultar <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+
+            <!-- Asesoría Legal -->
+            <div class="bg-white p-8 rounded-xl shadow-md border border-slate-100 hover:shadow-xl hover:border-brand-blue/30 transition duration-300">
+                <div class="w-14 h-14 bg-red-100 text-red-600 rounded-lg flex items-center justify-center text-2xl mb-6">
+                    <i class="fas fa-gavel"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-800 mb-3">Asesoría Legal</h3>
+                <p class="text-slate-600 mb-4">Respaldo jurídico en derecho corporativo, laboral y fiscal. Soluciones eficientes y preventivas.</p>
+                <a href="#contacto" class="text-brand-accent font-semibold hover:text-brand-blue text-sm">Consultar <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+
+            <!-- Traductorado -->
+            <div class="bg-white p-8 rounded-xl shadow-md border border-slate-100 hover:shadow-xl hover:border-brand-blue/30 transition duration-300">
+                <div class="w-14 h-14 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center text-2xl mb-6">
+                    <i class="fas fa-language"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-800 mb-3">Traductorado</h3>
+                <p class="text-slate-600 mb-4">Traducciones de alta calidad (Inglés-Español). Documentos técnicos, legales y financieros.</p>
+                <a href="#contacto" class="text-brand-accent font-semibold hover:text-brand-blue text-sm">Consultar <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+            
+            <!-- Relaciones Institucionales -->
+            <div class="bg-white p-8 rounded-xl shadow-md border border-slate-100 hover:shadow-xl hover:border-brand-blue/30 transition duration-300">
+                <div class="w-14 h-14 bg-slate-200 text-slate-600 rounded-lg flex items-center justify-center text-2xl mb-6">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-800 mb-3">Relaciones Institucionales</h3>
+                <p class="text-slate-600 mb-4">Asesoramiento especializado en Seguridad Pública y gestión de relaciones corporativas.</p>
+                <a href="#contacto" class="text-brand-accent font-semibold hover:text-brand-blue text-sm">Consultar <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="bg-brand-blue py-20 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16">
+                <!-- Info -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Contactanos</h2>
+                    <p class="text-white mb-8">Estamos listos para escuchar tus necesidades y desarrollar la estrategia perfecta para tu negocio.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-brand-accent rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Dirección</h4>
+                                <p class="text-slate-300 text-sm">Bolivar 1569, tercer piso, depto C, San Luis.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-brand-accent rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Teléfono</h4>
+                                <p class="text-slate-300 text-sm">2665049667</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-brand-accent rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Horarios</h4>
+                                <p class="text-slate-300 text-sm">Lunes a Viernes de 8 a 19hs</p>
+                            </div>
+                        </div>
+                        
+                        <div class="pt-6">
+                            <a href="https://www.instagram.com/estrategia360consulting/" target="_blank" class="inline-flex items-center gap-2 text-white hover:text-brand-light transition">
+                                <i class="fab fa-instagram text-4xl"></i>
+                                <span class="text-lg font-medium">Seguinos en Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario -->
+                <div class="bg-white rounded-xl p-8 shadow-2xl text-slate-800">
+                    <h3 class="text-2xl font-bold mb-6">Envianos un mensaje</h3>
+                    <form action="#" method="post" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Nombre y Apellido</label>
+                            <input type="text" name="nombre" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Email</label>
+                            <input type="email" name="email" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Teléfono</label>
+                            <input type="tel" name="tel" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Mensaje</label>
+                            <textarea name="mensaje" rows="4" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-blue text-white font-bold py-3 rounded-lg hover:bg-brand-accent transition transform hover:-translate-y-1 shadow-md">
+                            Enviar Consulta
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Mapa -->
+            <div class="mt-16 rounded-xl overflow-hidden shadow-lg border border-slate-700 hero-animate-simple">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.773505488551!2d-66.34995922534682!3d-33.29858797345001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d4395b2233758f%3A0x5c94134c22f245c3!2sBol%C3%ADvar%201569%2C%20D5700%20San%20Luis!5e0!3m2!1ses-419!2sar!4v1728605265573!5m2!1ses-419!2sar" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-brand-light py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>&copy; 2025 Estrategia 360. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Whatsapp -->
+    <a href="https://wa.me/542665049667?text=Buenos%20días,%20quisiera%20que%20me%20contacten%20para%20una%20asesoría" target="_blank" class="fixed bottom-10 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-4xl shadow-lg hover:bg-green-600 transition hover:-translate-y-1 z-50">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Mis Scripts -->
+    <script src="js/main.js"></script>
+
+    
+</body>
+</html>
