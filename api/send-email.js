@@ -30,9 +30,9 @@ export default async function handler(req, res) {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        from: "Contacto <onboarding@resend.dev>",
+        from: "Estrategia 360<onboarding@resend.dev>",
         to: ["martin.kanneman@gmail.com"],
-        subject: "Nuevo mail Estrategia360",
+        subject: "Nuevo mensaje de Estrategia 360",
         html: html
       })
     });
