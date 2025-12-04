@@ -126,23 +126,20 @@ function mostrarModal() {
 }
 
 }
-/*
-     FILE ARCHIVED ON 04:21:01 Mar 04, 2025 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 17:31:21 Nov 26, 2025.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
 
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
-*/
-/*
-playback timings (ms):
-  captures_list: 0.729
-  exclusion.robots: 0.018
-  exclusion.robots.policy: 0.008
-  esindex: 0.02
-  cdx.remote: 8.888
-  LoadShardBlock: 161.905 (3)
-  PetaboxLoader3.datanode: 203.428 (4)
-  PetaboxLoader3.resolve: 83.974 (2)
-  load_resource: 138.611
-*/
+async function enviarEmail() {
+  const respuesta = await fetch("/api/send-email", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      to: "destino@example.com",
+      subject: "Hola desde mi web!",
+      html: "<p>Esto es un mensaje enviado desde Vercel + Resend</p>"
+    })
+  });
+
+  const data = await respuesta.json();
+  console.log(data);
+}
+
+document.getElementById("btnEnviar").addEventListener("click", enviarEmail);

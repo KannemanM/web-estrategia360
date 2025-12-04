@@ -358,23 +358,72 @@
             </section>
             <div class="map-form">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.773505488551!2d-66.34995922534682!3d-33.29858797345001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d4395b2233758f%3A0x5c94134c22f245c3!2sBol%C3%ADvar%201569%2C%20D5700%20San%20Luis!5e0!3m2!1ses-419!2sar!4v1728605265573!5m2!1ses-419!2sar" width="50%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <form class="formulario" action="https://estrategia360.com.ar/email.php" method="post">
+                
 
-                    <input type="text" name="nombre" placeholder="Nombre y apellido" required>
+                <form id="contact-form" class="formulario">
 
+  <input type="text" name="nombre" placeholder="Nombre y apellido" required>
+  <input type="email" name="email" placeholder="E-mail" required>
+  <input type="text" name="tel" placeholder="Teléfono" required>
+  <textarea name="mensaje" placeholder="Mensaje" required></textarea>
 
-                    <input type="email" name="email" placeholder="E-mail" required>
+  <!-- Campo oculto anti-spam -->
+  <input type="text" name="website" style="display:none">
 
+  <button id="btn-enviar" type="submit">enviar</button>
 
-                    <input type="text" name="tel" placeholder="Teléfono" required>
+  <div class="modal" id="modal" style="display:none">
+    <p id="modal-text">Enviando mensaje...</p>
+    <div class="revolver"></div>
+  </div>
 
+</form>
 
-                    <textarea name="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
+<script>
+  const form = document.getElementById("contact-form");
+  const modal = document.getElementById("modal");
+  const modalText = document.getElementById("modal-text");
 
-                    <button id="btn-enviar">enviar</button>
-    <div class="modal"><p>Enviando mensaje</p><div class="revolver"></div></div>
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-                </form>
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    modal.style.display = "block";
+    modalText.textContent = "Enviando mensaje...";
+
+    try {
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      });
+
+      const json = await res.json();
+
+      if (!res.ok) {
+        throw new Error(json.error || "Error");
+      }
+
+      modalText.textContent = "✅ Mensaje enviado correctamente";
+      form.reset();
+
+      setTimeout(() => {
+        modal.style.display = "none";
+      }, 2500);
+
+    } catch (err) {
+      console.error(err);
+      modalText.textContent = "❌ Error al enviar. Intenta nuevamente.";
+      setTimeout(() => {
+        modal.style.display = "none";
+      }, 3000);
+    }
+  });
+</script>
+
             </div>
 
         </div>
