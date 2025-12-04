@@ -30,7 +30,7 @@ export default async function handler(req, res) {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        from: "Contacto <hola@martinkanneman.com>",
+        from: "Contacto <onboarding@resend.dev>",
         to: ["martin.kanneman@gmail.com"],
         subject: "Nuevo mail Estrategia360",
         html: html
