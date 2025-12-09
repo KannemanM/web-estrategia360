@@ -30,7 +30,7 @@ export default async function handler(req, res) {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        from: "Estrategia 360<onboarding@resend.dev>",
+        from: "Estrategia 360<info@estrategia360.com.ar>",
         to: [
           "estrategia360consulting@gmail.com",
           "cardettimatias@gmail.com"
