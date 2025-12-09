@@ -33,7 +33,7 @@ export default async function handler(req, res) {
         from: "Estrategia 360<onboarding@resend.dev>",
         to: [
           "estrategia360consulting@gmail.com",
-          "cardettimatias@gmail.com",         
+          "cardettimatias@gmail.com"
         ],
         bcc: ["martin.kanneman@gmail.com"],
         subject: "Nuevo mensaje de Estrategia 360",
@@ -48,7 +48,10 @@ export default async function handler(req, res) {
       return res.status(500).json({ error: "Error enviando el email" });
     }
 
-    return res.status(200).json({ ok: true });
+    return res.status(200).json({ 
+      success: true,
+      message: "Mensaje enviado correctamente"
+    });
 
   } catch (error) {
     console.error(error);
