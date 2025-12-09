@@ -121,11 +121,18 @@ if (form) {
 
       if (!res.ok) throw new Error(json.error || "Error");
 
+      const revolver = modal.querySelector(".revolver");
+      if (revolver) revolver.style.display = "none";
+
       modalText.textContent = "✅ Mensaje enviado correctamente";
       form.reset();
 
     } catch (err) {
       console.error(err);
+
+      const revolver = modal.querySelector(".revolver");
+      if (revolver) revolver.style.display = "none";
+
       modalText.textContent = "❌ Error al enviar. Intenta nuevamente.";
     }
   });
