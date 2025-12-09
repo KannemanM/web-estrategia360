@@ -343,7 +343,7 @@
                 <div class="datos">
                     <p>Dirección: Bolivar 1569, tercer piso, depto C</p>
                     <p>Horarios: Lunes a Viernes de 8 a 19hs</p>
-                    <p>Teléfono: 2665049667</p>
+                    <p>Teléfono: 2664582828</p>
                 </div>
                 
             </section>
@@ -369,51 +369,6 @@
   </div>
 
 </form>
-
-<script>
-  const form = document.getElementById("contact-form");
-  const modal = document.getElementById("modal");
-  const modalText = document.getElementById("modal-text");
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const data = Object.fromEntries(new FormData(form).entries());
-
-    modal.style.display = "block";
-    modalText.textContent = "Enviando mensaje...";
-
-    try {
-      const res = await fetch("/api/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-      });
-
-      const json = await res.json();
-
-      if (!res.ok) {
-        throw new Error(json.error || "Error");
-      }
-
-      modalText.textContent = "✅ Mensaje enviado correctamente";
-      form.reset();
-
-      setTimeout(() => {
-        modal.style.display = "none";
-      }, 2500);
-
-    } catch (err) {
-      console.error(err);
-      modalText.textContent = "❌ Error al enviar. Intenta nuevamente.";
-      setTimeout(() => {
-        modal.style.display = "none";
-      }, 3000);
-    }
-  });
-</script>
 
             </div>
 

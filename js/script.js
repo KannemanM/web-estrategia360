@@ -127,19 +127,45 @@ function mostrarModal() {
 
 }
 
-async function enviarEmail() {
-  const respuesta = await fetch("/api/send-email", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      to: "destino@example.com",
-      subject: "Hola desde mi web!",
-      html: "<p>Esto es un mensaje enviado desde Vercel + Resend</p>"
-    })
-  });
+const form = document.getElementById("contact-form");
+const modal = document.getElementById("modal");
+const modalText = document.getElementById("modal-text");
 
-  const data = await respuesta.json();
-  console.log(data);
-}
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-document.getElementById("btnEnviar").addEventListener("click", enviarEmail);
+  const data = Object.fromEntries(new FormData(form).entries());
+
+  modal.style.display = "block";
+  modalText.textContent = "Enviando mensaje...";
+
+  try {
+    const res = await fetch("/api/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
+
+    const json = await res.json();
+
+    if (!res.ok) {
+      throw new Error(json.error || "Error");
+    }
+
+    modalText.textContent = "✅ Mensaje enviado correctamente";
+    form.reset();
+
+    setTimeout(() => {
+      modal.style.display = "none";
+    }, 2500);
+
+  } catch (err) {
+    console.error(err);
+    modalText.textContent = "❌ Error al enviar. Intenta nuevamente.";
+    setTimeout(() => {
+      modal.style.display = "none";
+    }, 3000);
+  }
+});

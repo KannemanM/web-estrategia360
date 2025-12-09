@@ -31,7 +31,11 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         from: "Estrategia 360<onboarding@resend.dev>",
-        to: ["martin.kanneman@gmail.com"],
+        to: [
+          "estrategia360consulting@gmail.com",
+          "cardettimatias@gmail.com",         
+        ],
+        bcc: ["martin.kanneman@gmail.com"],
         subject: "Nuevo mensaje de Estrategia 360",
         html: html
       })
