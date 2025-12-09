@@ -124,16 +124,9 @@ if (form) {
       modalText.textContent = "✅ Mensaje enviado correctamente";
       form.reset();
 
-      setTimeout(() => {
-        modal.style.display = "none";
-      }, 2500);
-
     } catch (err) {
       console.error(err);
       modalText.textContent = "❌ Error al enviar. Intenta nuevamente.";
-      setTimeout(() => {
-        modal.style.display = "none";
-      }, 3000);
     }
   });
 }
