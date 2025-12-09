@@ -180,7 +180,7 @@ header {
     margin-top: 10rem;
     height: 50rem;
     width: 100%;
-    background-image: url("/img/background/principal.jpg");
+    /*background-image: url("/img/background/principal.jpg");*/
     background-repeat: no-repeat;
     background-position: 80px left;
     background-size: cover;
@@ -472,7 +472,6 @@ header {
 .historia-img {
     display: flex;
     align-items: center;
-    background-image: url('/img/logo/flechas-logo.webp');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
